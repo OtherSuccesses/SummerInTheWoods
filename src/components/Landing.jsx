@@ -1,13 +1,32 @@
 import React, { Component } from 'react';
 
-export class Landing extends Component {
+import Row from "./subcomponents/Row.jsx";
+import Image from "./subcomponents/Image.jsx";
+import Copy from "./subcomponents/Copy.jsx";
+const copyClass = "col-sm-12 col-md-7";
+const imageClass = "col-sm-12 col-md-5"; 
+const text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium facilis temporibus, sit molestias ipsum aliquam, quasi, voluptate mollitia nemo quisquam eligendi molestiae, blanditiis harum labore error sequi ipsam! Cum, odio.";
+const alt = "Children Playing";
+const images = ["../../images/IMG_9444.JPG", "../../images/IMG_9533.JPG", "../../images/IMG_9558.JPG", "../../images/IMG_9767.JPG"];
+export default class Landing extends Component {
+
 	render() {
 		return (
 			<div>
-				<Row>
-					<Copy copyClass="col-sm-12 col-md-5" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste itaque nisi dignissimos adipisci eveniet quidem modi tempora nobis. Sed optio illum incidunt, excepturi vero itaque beatae doloribus similique earum perspiciatis!" />
-					<Image src="../public/images/IMG_9467.jpg" />
-				</Row>
+				{images.map((image, i)=> {
+					console.log("i",i)
+					return(
+						<Row 
+							key={i} 
+							imageLeft={i%2}
+							copyClass={copyClass} 
+							imageClass={imageClass}
+							src={image}
+							text={text}
+						/>
+					)
+
+				})}
 			</div>
 		);
 	}
