@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export class Copy extends Component {
-	render() {
+export const Copy = ( {copyClass, text}) => {
 		return (
-			<div class={this.props.class}>
-				<p>{this.props.text}</p>
+			<div className={copyClass}>
+				<p>{text}</p>
 			</div>
 		);
 	}
