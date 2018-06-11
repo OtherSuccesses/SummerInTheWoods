@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Image = ( {imageClass, src, alt} ) => {
-	console.log(src);
+const Image = props => {
 	return (
-		<div className={imageClass}>
-			<img src={src} alt={alt}></img>
+		<div className={props.imageClass}>
+			<img src={props.src} alt={props.alt} />
 		</div>
 	);
 }
+
 export default Image;
