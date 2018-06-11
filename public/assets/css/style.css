@@ -1,0 +1,19 @@
+.responsive {
+    width: 100%;
+    height: auto;
+}
+.hero-body {
+  padding: 0;
+  margin: 0;
+}
+.navbar {
+  background-color: #060033;
+  margin: 0;
+  padding:0;
+}
+.image {
+  padding:0;
+}
+p {
+  font-size: 2em;
+}
